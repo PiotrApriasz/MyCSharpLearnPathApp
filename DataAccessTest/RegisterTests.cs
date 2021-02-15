@@ -18,8 +18,6 @@ namespace DataAccessTest
             {
                 Login = "piotrek",
                 Password = "placki",
-                Name = "Piotr",
-                Surname = "Apriasz"
             };
                 
             var aktualna = RegisterService.RegisterInXml(user);

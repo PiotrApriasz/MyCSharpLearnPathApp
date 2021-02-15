@@ -4,3 +4,5 @@ obj/
 riderModule.iml
 /_ReSharper.Caches/
 /MyCSharpLearnPath.sln.DotSettings.user
+/.vs/MyCSharpLearnPath/DesignTimeBuild/.dtbcache.v2
+/.vs/MyCSharpLearnPath/v16/.suo
