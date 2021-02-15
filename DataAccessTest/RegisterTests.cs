@@ -1,0 +1,29 @@
+using ApplicationCore;
+using DataAccess;
+using NUnit.Framework;
+
+namespace DataAccessTest
+{
+    public class RegisterTests
+    {
+        [SetUp]
+        public void Setup()
+        {
+        }
+
+        [Test]
+        public void RegisterToXmlTest()
+        {
+            User user = new User()
+            {
+                Login = "piotrek",
+                Password = "placki",
+                Name = "Piotr",
+                Surname = "Apriasz"
+            };
+                
+            var aktualna = RegisterService.RegisterInXml(user);
+            Assert.IsTrue(aktualna);
+        }
+    }
+}
