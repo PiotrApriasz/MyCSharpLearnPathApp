@@ -8,6 +8,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{94E465BE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessTest", "DataAccessTest\DataAccessTest.csproj", "{40D8DAEA-E64C-4A5B-986C-BD83FB232E32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCSharpLearnPathWPF", "MyCSharpLearnPathWPF\MyCSharpLearnPathWPF.csproj", "{1A90FACC-6DEC-496A-BC39-018B87264D28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{40D8DAEA-E64C-4A5B-986C-BD83FB232E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40D8DAEA-E64C-4A5B-986C-BD83FB232E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40D8DAEA-E64C-4A5B-986C-BD83FB232E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A90FACC-6DEC-496A-BC39-018B87264D28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A90FACC-6DEC-496A-BC39-018B87264D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A90FACC-6DEC-496A-BC39-018B87264D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A90FACC-6DEC-496A-BC39-018B87264D28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{40D8DAEA-E64C-4A5B-986C-BD83FB232E32} = {94E465BE-C080-4FCA-8B70-11A4EDAFAE7E}
