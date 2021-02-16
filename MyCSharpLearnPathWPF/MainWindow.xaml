@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyCSharpLearnPathWPF"
         mc:Ignorable="d"
-        Title="C# Learn Path App" Height="727" Width="916" ResizeMode="NoResize">
+        Title="C# Learn Path App" Height="727" Width="916" ResizeMode="CanMinimize" WindowStyle="SingleBorderWindow">
     <Grid>
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="D:\ProjektyC#\MyCSharpLearnPath\Images\aaron-burden-AXqMy8MSSdk-unsplash-1024x769.jpg"
@@ -13,10 +13,10 @@
         </Grid.Background>
         <Label x:Name="AppTitle" Content="C# Learn Path App" HorizontalAlignment="Center" Margin="0,49,0,0" VerticalAlignment="Top" FontSize="48" Background="{x:Null}" FontWeight="Normal" FontStyle="Normal" FontFamily="Corbel Light" Foreground="#FFAC7070"/>
         <TextBox x:Name="LoginTextBox" HorizontalAlignment="Center" Margin="0,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373" FontSize="28" AutomationProperties.IsRequiredForForm="True"/>
-        <Label x:Name="LoginLabel" Content="Login" HorizontalAlignment="Left" Margin="272,246,0,0" VerticalAlignment="Top" FontSize="24" Foreground="#FFE0DBDB"/>
+        <Label x:Name="LoginLabel" Content="Login" HorizontalAlignment="Left" Margin="259,241,0,0" VerticalAlignment="Top" FontSize="24" Foreground="#FFE0DBDB"/>
         <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Center" Margin="0,397,0,0" VerticalAlignment="Top" Width="373" FontSize="28" AutomationProperties.IsRequiredForForm="True"/>
-        <Label x:Name="PasswordLabel" Content="Password&#xD;&#xA;" HorizontalAlignment="Left" Margin="271,355,0,0" VerticalAlignment="Top" FontSize="24" Foreground="#FFE0DBDB" Height="42"/>
-        <Button x:Name="RegisterButton" Content="Sign up" HorizontalAlignment="Left" Margin="272,479,0,0" VerticalAlignment="Top" Height="47" Width="152" FontSize="20"/>
-        <Button x:Name="LoginButton" Content="Sign in" HorizontalAlignment="Left" Margin="492,479,0,0" VerticalAlignment="Top" Height="47" Width="152" FontSize="20"/>
+        <Label x:Name="PasswordLabel" Content="Password&#xD;&#xA;" HorizontalAlignment="Left" Margin="259,350,0,0" VerticalAlignment="Top" FontSize="24" Foreground="#FFE0DBDB" Height="42"/>
+        <Button x:Name="RegisterButton" Content="Sign up" HorizontalAlignment="Left" Margin="271,479,0,0" VerticalAlignment="Top" Height="47" Width="151" FontSize="20" RenderTransformOrigin="-0.255,0.51" Click="RegisterButton_Click"/>
+        <Button x:Name="LoginButton" Click="LoginButton_OnClick" Content="Sign in" HorizontalAlignment="Left" Margin="479,479,0,0" VerticalAlignment="Top" Height="47" Width="152" FontSize="20"/>
     </Grid>
 </Window>

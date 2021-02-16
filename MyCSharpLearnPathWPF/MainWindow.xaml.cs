@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ApplicationCore;
+using DataAccess;
 
 namespace MyCSharpLearnPathWPF
 {
@@ -23,6 +25,31 @@ namespace MyCSharpLearnPathWPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(LoginTextBox.Text) && !string.IsNullOrWhiteSpace(PasswordBox.Password))
+            {
+                var user = new User()
+                {
+                    Login = LoginTextBox.Text,
+                    Password = PasswordBox.Password
+                };
+
+                RegisterService.RegisterInXml(user);
+
+                MessageBox.Show("User have been registered succesfully!", "Register");
+            }
+            else
+            {
+                MessageBox.Show("Incorrect inputs!", "Register");
+            }
+        }
+
+        private void LoginButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

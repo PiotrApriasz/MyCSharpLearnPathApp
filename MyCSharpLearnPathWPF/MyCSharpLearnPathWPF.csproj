@@ -6,4 +6,9 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ApplicationCore\ApplicationCore.csproj" />
+      <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    </ItemGroup>
+
 </Project>
