@@ -9,6 +9,11 @@ namespace DataAccess
 {
     public static class RegisterService
     {
+        /// <summary>
+        /// Add new user to XML data base
+        /// </summary>
+        /// <param name="user">Object of user created while registration</param>
+        /// <returns></returns>
         public static bool RegisterInXml(User user)
         {
             var xd = new XmlDocument();
@@ -32,11 +37,38 @@ namespace DataAccess
             na3.AppendChild(na3Text);
             cl.AppendChild(na3);*/
 
-            xd.DocumentElement.AppendChild(cl);
+            xd?.DocumentElement?.AppendChild(cl);
             lfile.Close();
             xd.Save("/Database/CSharpLearnPathData.xml");
 
             return true;
+        }
+
+        /// <summary>
+        /// Check if in data base is the user with the same login as new user want
+        /// </summary>
+        /// <param name="login">Login which new user want to register</param>
+        /// <returns></returns>
+        public static bool IsLoginSameAsRegisteredBefore(string login)
+        {
+            var xdoc = new XmlDocument();
+            var up = new FileStream("/Database/CSharpLearnPathData.xml", FileMode.Open);
+            xdoc.Load(up);
+            XmlNodeList list = xdoc.GetElementsByTagName("User");
+
+            for (int i = 0; i < list.Count; i++) 
+            {
+                XmlElement cu = (XmlElement) xdoc.GetElementsByTagName("User")[i];
+
+                if (cu?.GetAttribute("Login") == login)
+                {
+                    up.Close();
+                    return true;
+                }
+            }
+
+            up.Close();
+            return false;
         }
     }
 }

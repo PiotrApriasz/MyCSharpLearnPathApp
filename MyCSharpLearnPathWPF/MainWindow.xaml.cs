@@ -31,15 +31,24 @@ namespace MyCSharpLearnPathWPF
         {
             if (!string.IsNullOrWhiteSpace(LoginTextBox.Text) && !string.IsNullOrWhiteSpace(PasswordBox.Password))
             {
-                var user = new User()
+                if (RegisterService.IsLoginSameAsRegisteredBefore(LoginTextBox.Text))
+                    MessageBox.Show("Login already exist!", "Register");
+                else if (LoginTextBox.Text.Length < 3)
+                    MessageBox.Show("Login must have more than 2 chars!", "Register");
+                else if (PasswordBox.Password.Length < 3)
+                    MessageBox.Show("Password must have more than 2 chars!", "Register");
+                else
                 {
-                    Login = LoginTextBox.Text,
-                    Password = PasswordBox.Password
-                };
+                    var user = new User()
+                    {
+                        Login = LoginTextBox.Text,
+                        Password = PasswordBox.Password
+                    };
 
-                RegisterService.RegisterInXml(user);
+                    RegisterService.RegisterInXml(user);
 
-                MessageBox.Show("User have been registered succesfully!", "Register");
+                    MessageBox.Show("User have been registered succesfully!", "Register");
+                }
             }
             else
             {

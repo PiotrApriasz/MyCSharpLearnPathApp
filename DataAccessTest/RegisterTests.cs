@@ -11,8 +11,8 @@ namespace DataAccessTest
         {
         }
 
-        [Test]
-        public void RegisterToXmlTest()
+        /*[Test]
+        public void RegisterToXml_Test()
         {
             User user = new User()
             {
@@ -21,6 +21,14 @@ namespace DataAccessTest
             };
                 
             var aktualna = RegisterService.RegisterInXml(user);
+            Assert.IsTrue(aktualna);
+        }*/
+        
+        [Test]
+        public void IsLoginSameAsRegisteredBefore_Test()
+        {
+            var aktualna = RegisterService.IsLoginSameAsRegisteredBefore("AlicjaTerazMnieKocha");
+            
             Assert.IsTrue(aktualna);
         }
     }
