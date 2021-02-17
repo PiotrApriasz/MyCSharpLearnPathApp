@@ -58,7 +58,18 @@ namespace MyCSharpLearnPathWPF
 
         private void LoginButton_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (!string.IsNullOrWhiteSpace(LoginTextBox.Text) && !string.IsNullOrWhiteSpace(PasswordBox.Password))
+            {
+                var signedIn = LoggingService.LoginXml(LoginTextBox.Text, PasswordBox.Password);
+
+                if (signedIn)
+                {
+                    var user = new User() {Login = LoginTextBox.Text, Password = PasswordBox.Password};
+                    MessageBox.Show("Signed in correctly!", "Login");
+                }
+                else MessageBox.Show("Incorrect login or password!", "Login");
+            }
+            else MessageBox.Show("Incorrect inputs!", "Login");
         }
     }
 }
