@@ -5,7 +5,6 @@ namespace MyCSharpLearnPathWPF
 {
     public partial class CSharpLearnPath : Window
     {
-        private User User { get; set; }
         public CSharpLearnPath()
         {
             InitializeComponent();
@@ -15,5 +14,7 @@ namespace MyCSharpLearnPathWPF
         {
             User = user;
         }
+        
+        private User User { get; set; }
     }
 }
