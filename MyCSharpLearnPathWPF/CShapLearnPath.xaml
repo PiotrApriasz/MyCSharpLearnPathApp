@@ -1,0 +1,10 @@
+﻿<Window x:Class="MyCSharpLearnPathWPF.CSharpLearnPath"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:MyCSharpLearnPathWPF"
+        mc:Ignorable="d"
+        Title="C#LearnPath" Height="700" Width="1100" ResizeMode="CanMinimize" Background="#FFADA5A5" Icon="/Reminders-icon — kopia.png">
+    <Grid/>
+</Window>

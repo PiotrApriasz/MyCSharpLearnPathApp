@@ -1,11 +1,11 @@
-﻿<Window x:Class="MyCSharpLearnPathWPF.MainWindow"
+﻿<Window x:Class="MyCSharpLearnPathWPF.HelloWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyCSharpLearnPathWPF"
         mc:Ignorable="d"
-        Title="C# Learn Path App" Height="727" Width="916" ResizeMode="CanMinimize" WindowStyle="SingleBorderWindow">
+        Title="C# Learn Path App" Height="727" Width="916" ResizeMode="CanMinimize" WindowStyle="SingleBorderWindow" Icon="/Reminders-icon.png">
     <Grid>
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="D:\ProjektyC#\MyCSharpLearnPath\Images\aaron-burden-AXqMy8MSSdk-unsplash-1024x769.jpg"

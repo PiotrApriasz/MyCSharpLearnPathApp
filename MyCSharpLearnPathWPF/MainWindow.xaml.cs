@@ -20,9 +20,9 @@ namespace MyCSharpLearnPathWPF
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HelloWindow : Window
     {
-        public MainWindow()
+        public HelloWindow()
         {
             InitializeComponent();
         }
@@ -65,7 +65,9 @@ namespace MyCSharpLearnPathWPF
                 if (signedIn)
                 {
                     var user = new User() {Login = LoginTextBox.Text, Password = PasswordBox.Password};
-                    MessageBox.Show("Signed in correctly!", "Login");
+                    var mainWindow = new CSharpLearnPath(user);
+                    mainWindow.Show();
+                    Close();
                 }
                 else MessageBox.Show("Incorrect login or password!", "Login");
             }

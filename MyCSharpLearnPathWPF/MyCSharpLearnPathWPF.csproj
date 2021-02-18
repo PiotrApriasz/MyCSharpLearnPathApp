@@ -7,8 +7,18 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="Reminders-icon — kopia.png" />
+      <None Remove="Reminders-icon.png" />
+    </ItemGroup>
+
+    <ItemGroup>
       <ProjectReference Include="..\ApplicationCore\ApplicationCore.csproj" />
       <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Reminders-icon — kopia.png" />
+      <Resource Include="Reminders-icon.png" />
     </ItemGroup>
 
 </Project>
