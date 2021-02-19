@@ -16,5 +16,20 @@ namespace MyCSharpLearnPathWPF
         }
         
         private User User { get; set; }
+        
+        private void HomeButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void LearnPathButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void ReminderButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -4,14 +4,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:MyCSharpLearnPathWPF"
+        xmlns:viewmodels="clr-namespace:MyCSharpLearnPathWPF.ViewModels"
+        xmlns:views="clr-namespace:MyCSharpLearnPathWPF.Views"
         mc:Ignorable="d"
         Title="C#LearnPath" Height="700" Width="1100" ResizeMode="CanMinimize" Background="#FFE2DCDC" Icon="/Reminders-icon — kopia.png" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <DataTemplate x:Name="homeViewTemplate" DataType="{x:Type viewmodels:HomeViewModel}">
+            <views:Home DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="learnPathViewTemplate" DataType="{x:Type viewmodels:LearnPathViewModel}">
+            <views:LearnPath DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="reminderTemplate" DataType="{x:Type viewmodels:ReminderViewModel}">
+            <views:Reminder DataContext="{Binding}"/>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        <Grid x:Name="Menu" Margin="0,0,878,0" Background="#FF907373">
-            <Button x:Name="HomeButton" Content="Home" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Height="56" Width="212" FontFamily="Century Gothic" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Opacity="0.995"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="44*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="Menu" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Background="#FF7C5C5C">
+            <Button x:Name="HomeButton" Content="Home" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Height="56" Width="212" FontFamily="Century Gothic" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Opacity="0.995"
+                    Click="HomeButton_OnClick" />
             <Rectangle x:Name="Pointer" HorizontalAlignment="Left" Height="56" Margin="0,86,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Fill="Black"/>
-            <Button x:Name="LearnPathButton" Content="Learn Path" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top" Height="56" Width="212" FontFamily="Century Gothic" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Opacity="0.995"/>
-            <Button x:Name="ReminderButton" Content="Reminder" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Height="56" Width="212" FontFamily="Century Gothic" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Opacity="0.995"/>
+            <Button x:Name="LearnPathButton" Content="Learn Path" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top" Height="56" Width="212" FontFamily="Century Gothic" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Opacity="0.995"
+                    Click="LearnPathButton_OnClick" />
+            <Button x:Name="ReminderButton" Content="Reminder" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Height="56" Width="212" FontFamily="Century Gothic" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Opacity="0.995"
+                    Click="ReminderButton_OnClick" />
         </Grid>
+
+        <ContentControl Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Content="{Binding}"/>
+
     </Grid>
 </Window>
