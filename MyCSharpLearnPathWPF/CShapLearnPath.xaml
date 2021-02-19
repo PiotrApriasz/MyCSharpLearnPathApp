@@ -35,14 +35,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid x:Name="Menu" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Background="#FF7C5C5C">
+        <Grid x:Name="Menu" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Background="#FFA58D8B">
             <Button x:Name="HomeButton" Content="Home" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Height="56" Width="212" FontFamily="Century Gothic" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Opacity="0.995"
                     Click="HomeButton_OnClick" />
-            <Rectangle x:Name="Pointer" HorizontalAlignment="Left" Height="56" Margin="0,86,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Fill="Black"/>
+            <Rectangle x:Name="Pointer1" HorizontalAlignment="Left" Height="56" Margin="0,86,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Fill="Black"/>
             <Button x:Name="LearnPathButton" Content="Learn Path" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top" Height="56" Width="212" FontFamily="Century Gothic" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Opacity="0.995"
                     Click="LearnPathButton_OnClick" />
             <Button x:Name="ReminderButton" Content="Reminder" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Height="56" Width="212" FontFamily="Century Gothic" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Opacity="0.995"
                     Click="ReminderButton_OnClick" />
+            <Rectangle x:Name="Pointer2" HorizontalAlignment="Left" Height="56" Margin="0,147,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Fill="Black"/>
+            <Rectangle x:Name="Pointer3" HorizontalAlignment="Left" Height="56" Margin="0,208,0,0" Stroke="Black" VerticalAlignment="Top" Width="10" Fill="Black"/>
         </Grid>
 
         <ContentControl Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5" Content="{Binding}"/>
