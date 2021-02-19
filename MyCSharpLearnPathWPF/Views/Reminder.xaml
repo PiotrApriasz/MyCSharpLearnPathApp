@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:MyCSharpLearnPathWPF.Views"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+    <Grid Background="#FF1995AD">
         
     </Grid>
 </UserControl>

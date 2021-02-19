@@ -45,7 +45,7 @@
                     Click="ReminderButton_OnClick" />
         </Grid>
 
-        <ContentControl Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Content="{Binding}"/>
+        <ContentControl Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5" Content="{Binding}"/>
 
     </Grid>
 </Window>
